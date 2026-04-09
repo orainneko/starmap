@@ -60,7 +60,7 @@ if go_clicked:
     with placeholder.container():
         st.subheader("結果:")
         st.write("我啥都還沒開始寫，但我可以告訴你你輸入了", hr,"點", mins,"分")
-        st.write(loca[0], loca[1], loca[2])
+        st.write(loca[0], loca[1], loca[2],loca[3])
         st.divider()
         st.subheader("建議最佳地點一覽:")
         st.write("google map")
