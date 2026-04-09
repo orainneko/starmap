@@ -6,28 +6,28 @@ Created on Thu Apr  9 14:43:22 2026
 """
 
 import streamlit as st
-import numpy as np
+import pandas as pd
 import base64
+import tomllib as toml
 import os
 
 #from backend.py import get_star_position
 
+with open("config.toml", "rb") as f:
+    config = toml.load(f)
+
 # My first app
-st.title("星空地圖")
+st.title(config["app"]["title"])
 st.write("選擇觀測**時間** (24小時制)")
 col1, col2 = st.columns([1,1])  # 分2個欄位
 
-a = np.arange(1,25)
-b = np.arange(0,61)
-
-
 with col1:
-    hr = st.selectbox("時", a)
+    hr = st.selectbox("時", range(24),index=config["default"]["hour"])
     
 with col2:
-    mins = st.selectbox("分", b)
+    mins = st.selectbox("分", range(61),index=config["default"]["minute"])
 
-st.write("""選擇觀測**地點**""")
+st.write("選擇觀測**地點**")
 loca = [st.text_input("國家"),st.text_input("縣市"),st.text_input("鄉鎮市區"),st.text_input("其他(選填)")]
 
 if st.button("go!"):
