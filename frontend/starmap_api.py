@@ -8,6 +8,8 @@ Created on Thu Apr  9 14:43:22 2026
 import streamlit as st
 import numpy as np
 import base64
+import os
+
 #from backend.py import get_star_position
 
 # My first app
@@ -34,8 +36,10 @@ if st.button("go!"):
     st.write(loca[0],loca[1],loca[2])
     #st.write(pos)
 
-file_ = open(r"\gif\mogu.gif", "rb")
-contents = file_.read()
+file_path = os.path.join(os.path.dirname(__file__), "gif", "mogu.gif")
+with open(file_path, "rb") as file_:
+    contents = file_.read()
+
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
 
