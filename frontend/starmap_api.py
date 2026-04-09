@@ -44,7 +44,10 @@ ct2 = st.container()
 with ct2:
     ct2.divider()
     ct2.write("選擇觀測**地點**")
-    loca = [ct2.text_input("國家"),ct2.text_input("縣市"),ct2.text_input("鄉鎮市區"),ct2.text_input("其他(選填)")]
+    loca = [ct2.text_input("國家",value=config["default"]["country"]),
+            ct2.text_input("縣市",value=config["default"]["city"]),
+            ct2.text_input("鄉鎮市區",value=config["default"]["district"]),
+            ct2.text_input("其他(選填)",value=config["default"]["other"])]
     ct2.divider()
 ##
 

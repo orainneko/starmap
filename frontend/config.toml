@@ -4,3 +4,7 @@ title = "星空地圖"
 [default]
 hour = 1
 minute = 9
+country = "小人國"
+city = "高譚市"
+district = "必區"
+option = "沒有路101號"
