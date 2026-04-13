@@ -10,7 +10,6 @@ import pandas as pd
 import base64
 import tomllib as toml
 import matplotlib.pyplot as plt
-plt.rcParams["font.family"] = "DejaVu Sans"
 import os
 import datetime
 
@@ -136,9 +135,9 @@ elif st.session_state.results is not None:
         name = row['proper'] if pd.notna(row['proper']) else f"HR {row['HR']}"
         ax.text(row['azimuth'], row['altitude'], name)
 
-    ax.set_xlabel("方位 (Azimuth)")
-    ax.set_ylabel("仰角 (Altitude)")
-    ax.set_title("星體位置")
+    ax.set_xlabel("Azimuth")
+    ax.set_ylabel("Altitude")
+    ax.set_title("Star position")
 
     st.pyplot(fig)
 

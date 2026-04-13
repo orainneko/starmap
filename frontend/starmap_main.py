@@ -19,7 +19,6 @@ import pandas as pd
 import astropy.units as u
 import numpy as np
 import matplotlib.pyplot as plt
-plt.rcParams["font.family"] = "DejaVu Sans"
 import os
 import datetime
 from astropy.time import Time
