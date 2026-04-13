@@ -47,7 +47,7 @@ with st.sidebar:
     st.subheader("📍 地點")
     country = st.text_input("國家", value=config["default"]["country"])
     city = st.text_input("縣市", value=config["default"]["city"])
-    district = st.text_input("區", value=config["default"]["district"])
+    district = st.text_input("鄉鎮市區", value=config["default"]["district"])
 
     go_clicked = st.button("🔥開始觀測🔥")
 
