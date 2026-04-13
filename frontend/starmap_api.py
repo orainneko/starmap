@@ -40,8 +40,8 @@ with st.sidebar:
 
     now = datetime.datetime.now()
 
-    date = st.date_input("日期", value=now.date())
-    time = st.time_input("時間", value=now.time())
+    date = st.date_input("日期")
+    time = st.time_input("時間")
     dt = datetime.datetime.combine(date, time)
 
     st.subheader("📍 地點")
