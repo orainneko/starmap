@@ -1,2 +1,2 @@
 # starmap
-a map that can guide u to the best star-gazing spots
+a map that can let you know the nearest stars
